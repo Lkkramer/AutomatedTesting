@@ -1,0 +1,3 @@
+start code "%cd%"
+
+wsl docker run --rm -e DISPLAY=:0 -v /tmp/.X11-unix:/tmp/.X11-unix mcr.microsoft.com/playwright:v1.44.0 npx -y playwright open google.com
