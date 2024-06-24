@@ -24,9 +24,6 @@ def test_example(page: Page) -> None:
     page.get_by_role("link", name="Boek een interventie").click()
     page.get_by_role("link", name=" Mentaal").click()
     page.get_by_role("link", name="@Work Max12 Work Max12 is een").click()
-    with page.expect_popup() as page1_info:
-        page.get_by_role("link", name="Direct aanvragen").click()
-    page1 = page1_info.value
     page.get_by_role("link", name="Direct bestellen").click()
     page.locator(".dummy").first.click()
     page.locator("div:nth-child(2) > .radio-label > .input-radio > .dummy").first.click()
